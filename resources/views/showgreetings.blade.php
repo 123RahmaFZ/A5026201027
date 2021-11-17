@@ -43,7 +43,7 @@
 <body>
     <div class="container mt-3 mb-3 shadow-lg">
 
-//tugas 5
+
         <form name="RegistrationForm" action="greetings" method="post" onsubmit="return FormInput()" >
             @csrf
             <center><h1>GET TO KNOW YOU</h1></center>

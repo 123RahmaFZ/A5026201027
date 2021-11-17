@@ -52,7 +52,6 @@
             <div class="row mb-3">
                 <label for="course" class="col-sm-2 col-form-label">Jurusan</label>
                 <div class="col-sm-10">
-
                     <select style="width: 100%;" id="jurusan">
                         <option selected disabled></option>
                         <option value="true">Sistem Informasi</option>

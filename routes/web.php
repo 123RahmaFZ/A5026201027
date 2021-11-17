@@ -38,5 +38,5 @@ Route::get('ETS', function ( ) {
 });
 
 //tugas 5
-Route::get('tugas_5',"ViewContol@show");
+Route::get('tugas_5',"ViewControl@show");
 Route::get('datang',"ViewControl@resultWelcome");
