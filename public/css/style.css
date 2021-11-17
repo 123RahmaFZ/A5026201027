@@ -1,0 +1,32 @@
+a{
+    text-decoration: none;
+}
+
+.col-md-1 {
+    margin: 0 15px;
+}
+
+.col-md-1 img {
+    height: 70px;
+    margin-bottom: 20px;
+}
+.col-md-1 p{
+    font-weight: bold;
+}
+
+.col-md-2 img {
+    width: 100%;
+    margin-bottom: 20px;
+}
+.col-md-2 p{
+font-size: 20px;
+}
+
+.col img{
+    width: 100%;
+}
+p{
+    font-size: 15px;
+    text-decoration: none;
+    color: black;
+}
