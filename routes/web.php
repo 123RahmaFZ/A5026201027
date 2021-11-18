@@ -40,3 +40,14 @@ Route::get('ETS', function ( ) {
 //tugas 5
 Route::get('tugas_5',"ViewControl@show");
 Route::get('datang',"ViewControl@resultWelcome");
+
+//route CRUD
+Route::get('/pegawai','PegawaiController@index');
+Route::get('/pegawai/tambah','PegawaiController@tambah');
+Route::post('/pegawai/store','PegawaiController@store');
+Route::get('/pegawai/edit/{id}','PegawaiController@edit');
+Route::post('/pegawai/update','PegawaiController@update');
+// alihkan halaman ke halaman pegawai
+return redirect('/pegawai');
+Route::get('/pegawai/hapus/{id}','PegawaiController@hapus');
+ return redirect('/pegawai');
