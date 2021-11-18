@@ -40,15 +40,7 @@ public function store(Request $request)
 	return redirect('/pegawai');  //tidak return view karena jadi tidak fleksiibel
 
 }
-// method untuk hapus data pegawai
-public function hapus($id)
-{
-	// menghapus data pegawai berdasarkan id yang dipilih
-DB::table('pegawai')->where('pegawai_id',$id)->delete();
 
-	// alihkan halaman ke halaman pegawai
-	return redirect('/pegawai');
-}
 // method untuk edit data pegawai
 public function edit($id)
 {
@@ -56,7 +48,6 @@ public function edit($id)
 $pegawai = DB::table('pegawai')->where('pegawai_id',$id)->get();
 	// passing data pegawai yang didapat ke view edit.blade.php
 	return view('pegawai.edit',['pegawai' => $pegawai]);
-
 }
 // update data pegawai
 public function update(Request $request)
@@ -68,6 +59,14 @@ public function update(Request $request)
 		'pegawai_umur' => $request->umur,
 		'pegawai_alamat' => $request->alamat
 	]);
+	// alihkan halaman ke halaman pegawai
+	return redirect('/pegawai');
+}
+public function hapus($id)
+{
+	// menghapus data pegawai berdasarkan id yang dipilih
+	DB::table('pegawai')->where('pegawai_id',$id)->delete();
+
 	// alihkan halaman ke halaman pegawai
 	return redirect('/pegawai');
 }
