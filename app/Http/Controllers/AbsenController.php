@@ -20,9 +20,10 @@ class AbsenController extends Controller
     // method untuk menampilkan view form tambah absen
 	public function tambah()
 	{
-
+        //mengambil data dari tabel pegawai
+        $pegawai = DB::table('pegawai')->orderBy('pegawai_nama', 'asc')->get(); //defaultnya urut Primary Key
 		// memanggil view tambah
-		return view('absen.tambah');
+		return view('absen.tambah', ['pegawai' => $pegawai]);
 
 	}
 
@@ -31,7 +32,7 @@ class AbsenController extends Controller
 	{
 		// insert data ke table absen
 		DB::table('absen')->insert([
-			'ID' => $request->ID,
+
 			'IDPegawai' => $request->IDPegawai,
 			'Tanggal' => $request->Tanggal,
 			'Status' => $request->Status
@@ -46,8 +47,15 @@ class AbsenController extends Controller
 	{
 		// mengambil data absen berdasarkan id yang dipilih
 		$absen = DB::table('absen')->where('ID',$id)->get();
+
+        //mengambil data dari tabel pegawai
+        $pegawai = DB::table('pegawai')->orderBy('pegawai_nama', 'asc')->get(); //defaultnya urut Primary Key
+
+        $judul = "Hallo Apa kabar" ;
+
+
 		// passing data absen yang didapat ke view edit.blade.php
-		return view('absen.edit',['absen' => $absen]);
+		return view('absen.edit',['absen' => $absen,'pegawai' => $pegawai , 'judul' => $judul]);
 
 	}
 
@@ -56,7 +64,7 @@ class AbsenController extends Controller
 	{
 		// update data absen
 		DB::table('absen')->where('ID',$request->id)->update([
-			'ID' => $request->ID,
+
 			'IDPegawai' => $request->IDPegawai,
 			'Tanggal' => $request->Tanggal,
 			'Status' => $request->Status

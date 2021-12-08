@@ -1,0 +1,20 @@
+.container-fluid{
+    padding: 3% 5%;
+}
+@media (min-width: 900px) {
+    .container{
+        padding: 5% 25%;
+    }
+}
+.card {
+    padding: 2% 5%;
+}
+.card-header{
+    background-color: transparent;
+            border: none !important;
+}
+
+#reset{
+    background-color: #2fff1c;
+    border: 2px solid #2fff1c;
+}

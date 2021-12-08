@@ -1,38 +1,34 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Tutorial Membuat CRUD Pada Laravel - www.malasngoding.com</title>
-</head>
-<body>
-	<h3>Data Absen Pegawai</h3>
+@extends('layout.bahagia')
+@section('Konten')
 
-	<a href="/absen/tambah"> + Tambah Absen</a>
+	<h3>Data Absen</h3>
+
+	<a class="btn btn-warning" href="/absen/tambah"> + Tambah Absen Baru</a>
 
 	<br/>
 	<br/>
 
-	<table border="1">
-		<tr>
-			<th>ID</th>
-			<th>IDPegawai</th>
+	<table class="table table-hover">
+		<tr class="table-warning">
+			<th>ID Pegawai</th>
 			<th>Tanggal</th>
 			<th>Status</th>
-            <th>Opsi</th>
+			<th>Opsi</th>
 		</tr>
-		@foreach($absen as $p)
+		@foreach($absen as $a)
 		<tr>
-			<td>{{ $p->ID }}</td>
-			<td>{{ $p->IDPegawai }}</td>
-			<td>{{ $p->Tanggal }}</td>
-			<td>{{ $p->Status }}</td>
+			<div class="table-secondary">
+			<td>{{ $a->IDPegawai }}</td>
+			<td>{{ $a->Tanggal }}</td>
+			<td>{{ $a->Status }}</td>
+			</div>
 			<td>
-				<a href="/absen/edit/{{ $p->ID }}">Edit</a>
+				<a href="/absen/edit/{{ $a->ID}}">Edit</a>
 				|
-				<a href="/absen/hapus/{{ $p->ID }}">Hapus</a>
+				<a href="/absen/hapus/{{ $a->ID}}">Hapus</a>
 			</td>
 		</tr>
 		@endforeach
 	</table>
 
-</body>
-</html>
+@endsection
