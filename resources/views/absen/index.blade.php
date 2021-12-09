@@ -10,7 +10,7 @@
 
 	<table class="table table-hover">
 		<tr class="table-warning">
-			<th>ID Pegawai</th>
+			<th>Nama Pegawai</th>
 			<th>Tanggal</th>
 			<th>Status</th>
 			<th>Opsi</th>
@@ -18,7 +18,7 @@
 		@foreach($absen as $a)
 		<tr>
 			<div class="table-secondary">
-			<td>{{ $a->IDPegawai }}</td>
+			<td>{{ $a->pegawai_nama }}</td>
 			<td>{{ $a->Tanggal }}</td>
 			<td>{{ $a->Status }}</td>
 			</div>
@@ -30,5 +30,5 @@
 		</tr>
 		@endforeach
 	</table>
-
+    {{ $absen->links()}}
 @endsection
