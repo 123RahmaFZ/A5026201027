@@ -95,15 +95,9 @@
     </a>
   </li>
   <li class="nav-item">
-    <a class="nav-link " href="">
+    <a class="nav-link " href="/keyboard">
       <i class="bi bi-grid"></i>
-      <span>Tugas Minggu Depan</span>
-    </a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link " href="">
-      <i class="bi bi-grid"></i>
-      <span>Praktikum</span>
+      <span>Keyboard</span>
     </a>
   </li><!-- End Dashboard Nav -->
 

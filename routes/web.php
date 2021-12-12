@@ -60,3 +60,14 @@ Route::post('/absen/store','AbsenController@store');
 Route::get('/absen/edit/{id}','AbsenController@edit');
 Route::post('/absen/update','AbsenController@update');
 Route::get('/absen/hapus/{id}','AbsenController@hapus');
+
+
+//route keyboard
+Route::get('/keyboard','KeyboardController@index');
+Route::get('/keyboard/tambah','KeyboardController@tambah');
+Route::post('/keyboard/store','keyboardController@store');
+Route::get('/keyboard/edit/{kodekeyboard}','keyboardController@edit');
+Route::post('/keyboard/update','keyboardController@update');
+Route::get('/keyboard/hapus/{kodekeyboard}','keyboardController@hapus');
+Route::get('/keyboard/cari','keyboardController@cari');
+Route::get('/keyboard/view/{kodekeyboard}','keyboardController@detail');
