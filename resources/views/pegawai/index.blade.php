@@ -1,16 +1,20 @@
 @extends('layout.bahagia')
 @section('Konten')
 
-<div class="container" align="center">
-    <form action="/pegawai/cari" method="GET">
-        <input type="text" name="cari" placeholder="Cari Pegawai berdasarkan nama atau alamat .." value="{{ old('cari') }}">
-        <input type="submit" class="btn btn-default" value="CARI">
-    </form>
-</div>
+
 
 	<h3>Data Pegawai</h3>
 
-	<a class="btn btn-warning" href="/pegawai/tambah"> + Tambah Pegawai Baru</a>
+	<div class="row">
+        <div class="col"><a class="btn btn-warning" href="/keyboard/tambah"> + Tambah</a></div>
+        <div class="col d-flex justify-content-end">
+
+            <form action="/pegawai/cari" method="GET">
+                <input type="text" name="cari" placeholder="Cari Pegawai berdasarkan nama atau alamat .." value="{{ old('cari') }}">
+                <input type="submit" class="btn btn-default" value="CARI">
+            </form>
+        </div>
+    </div>
 
 	<br/>
 	<br/>
