@@ -81,6 +81,12 @@
       <i class="bi bi-grid"></i>
       <span>Keyboard</span>
     </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link " href="/keranjangbelanja">
+      <i class="bi bi-grid"></i>
+      <span>keranjang belanja</span>
+    </a>
   </li><!-- End Dashboard Nav -->
 
 

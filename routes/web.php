@@ -71,3 +71,10 @@ Route::post('/keyboard/update','keyboardController@update');
 Route::get('/keyboard/hapus/{kodekeyboard}','keyboardController@hapus');
 Route::get('/keyboard/cari','keyboardController@cari');
 Route::get('/keyboard/view/{kodekeyboard}','keyboardController@detail');
+
+
+//EAD Keranjang belanja
+Route::get('/keranjangbelanja','keranjangbelanjaController@index');
+Route::get('/keranjangbelanja/tambah','KeranjangbelanjaController@tambah');
+Route::post('/keranjangbelanja/store','keranjangbelanjaController@store');
+Route::get('/keranjangbelanja/hapus/{ID}','keranjangbelanjaController@hapus');
